@@ -1,12 +1,8 @@
-let firstNumber;
-let secondNumber;
-let operator;
-
-function add(a, b){
+function add(a, b){    
     return a + b;
 }
 
-function substract(a, b){
+function subtract(a, b){
     return a - b;
 }
 
@@ -18,21 +14,20 @@ function divide(a, b){
     return a / b;
 }
 
-function operate(firstNumber, operator, secondNumber){
-    switch (operator) {
+function operate(a, op, b){
+    let firstNumber = parseFloat(a);
+    let secondNumber = parseFloat(b);
+
+    switch (op) {
         case "+":
             return add(firstNumber, secondNumber);
-            break;
         case "-":
-            return substract(firstNumber, secondNumber);
-            break;
+            return subtract(firstNumber, secondNumber);
         case "*":
             return multiply(firstNumber, secondNumber);
-            break;
         case "/":
             return divide(firstNumber, secondNumber);
-            break
         default:
-            break;
+            return "Syntax Error";
     }
 };
