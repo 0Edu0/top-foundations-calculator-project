@@ -1,3 +1,7 @@
+const digits = document.querySelectorAll('[data-type="number"]');
+const display = document.querySelector(".display");
+
+// Functions to operate the calculator
 function add(a, b){    
     return a + b;
 }
