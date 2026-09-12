@@ -24,3 +24,12 @@ body {
     font-size: 1.1rem;
     /* aspect-ratio: 1; */
 }
+
+.display {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    padding: 120x;
+    text-align: right;
+    font-size: 1.8rem;
+}
