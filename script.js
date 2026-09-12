@@ -1,5 +1,19 @@
 const digits = document.querySelectorAll('[data-type="number"]');
 const display = document.querySelector(".display");
+let firstNumber = null;
+let operator = null;
+let resetDisplay = true;
+
+digits.forEach((digit) => {
+    digit.addEventListener("click", e => {
+        if(resetDisplay){
+            display.value = e.currentTarget.dataset.value;
+            resetDisplay = false;
+        }else {
+            display.value += e.currentTarget.dataset.value;
+        }
+    });
+})
 
 // Functions to operate the calculator
 function add(a, b){    
