@@ -18,6 +18,21 @@ function divide(a, b){
     return a / b;
 }
 
-function operate(firstNumber, secondNumber, operator){
-    add(firstNumber, secondNumber);
+function operate(firstNumber, operator, secondNumber){
+    switch (operator) {
+        case "+":
+            return add(firstNumber, secondNumber);
+            break;
+        case "-":
+            return substract(firstNumber, secondNumber);
+            break;
+        case "*":
+            return multiply(firstNumber, secondNumber);
+            break;
+        case "/":
+            return divide(firstNumber, secondNumber);
+            break
+        default:
+            break;
+    }
 };
