@@ -1,8 +1,17 @@
 const digits = document.querySelectorAll('[data-type="number"]');
 const display = document.querySelector(".display");
+const operators = document.querySelectorAll('[data-type="operator"]')
 let firstNumber = null;
 let operator = null;
 let resetDisplay = true;
+
+operators.forEach((opButton) => {
+    opButton.addEventListener("click", e => {
+        operator = e.currentTarget.dataset.value;
+        firstNumber = display.value;
+        resetDisplay = true;
+    });
+})
 
 digits.forEach((digit) => {
     digit.addEventListener("click", e => {
