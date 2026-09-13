@@ -1,6 +1,8 @@
 const digits = document.querySelectorAll('[data-type="number"]');
 const display = document.querySelector(".display");
 const operators = document.querySelectorAll('[data-type="operator"]')
+const equalsButton = document.querySelector('[data-type="equalsSymbol"]');
+const clearButton = document.querySelector('[data-type="clear"]');
 let firstNumber = null;
 let operator = null;
 let resetDisplay = true;
@@ -23,6 +25,15 @@ digits.forEach((digit) => {
         }
     });
 })
+
+equalsButton.addEventListener("click", e => {
+    if(operator === null) return;
+    const result = operate(firstNumber, operator, display.value);
+    display.value = result;
+    firstNumber = result;
+    operator = null;
+    resetDisplay = true;
+});
 
 // Functions to operate the calculator
 function add(a, b){    
