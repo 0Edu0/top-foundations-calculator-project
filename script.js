@@ -35,6 +35,13 @@ equalsButton.addEventListener("click", e => {
     resetDisplay = true;
 });
 
+clearButton.addEventListener("click", e => {
+    display.value = 0;
+    firstNumber = null;
+    operator = null;
+    resetDisplay = true;
+});
+
 // Functions to operate the calculator
 function add(a, b){    
     return a + b;
